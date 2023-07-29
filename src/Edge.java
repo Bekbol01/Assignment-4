@@ -1,25 +1,33 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 public class Edge<V> {
-    private Map<Vertex<V>, List<Edge<V>>> map = new HashMap<>();
+    private V source;
+    private V dest;
+    private Double weight;
+
+    public Edge(V source, V dest, Double weight) {
+        this.source = source;
+        this.dest = dest;
+        this.weight = weight;
+    }
 
     public Edge() {
+
     }
 
-    public void addVertex(Vertex<V> vertex) {
-        map.put(vertex, new ArrayList<>());
+    public V getSource() {
+        return source;
     }
 
-    public void addEdge(Vertex<V> source, Vertex<V> dest, double weight) {
-        List<Edge<V>> edges = map.get(source);
-        edges.add(new Edge<>());
+    public V getDest() {
+        return dest;
     }
 
-    // Getters and setters if needed
-    public Map<Vertex<V>, List<Edge<V>>> getMap() {
-        return map;
+    public Double getWeight() {
+        return weight;
+    }
+
+    public void addVertex(Vertex<V> vertexA) {
+    }
+
+    public void addEdge(Vertex<V> vertexA, Vertex<V> vertexB, double v) {
     }
 }

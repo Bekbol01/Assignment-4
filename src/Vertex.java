@@ -1,6 +1,4 @@
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class Vertex<V> {
@@ -16,7 +14,7 @@ public class Vertex<V> {
         adjacentVertices.put(destination, weight);
     }
 
-    // Getters and setters if needed
+
     public V getData() {
         return data;
     }
@@ -25,6 +23,3 @@ public class Vertex<V> {
         return adjacentVertices;
     }
 }
-
-
-
